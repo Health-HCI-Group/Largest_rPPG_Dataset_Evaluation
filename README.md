@@ -89,7 +89,7 @@ We have done experiments across vv100 and other three datasets - PURE, UBFC-rPPG
 ## Unsupervised Methods on vv100 and vvAll
 
 The figure shows Mean Absolute Error (MAE) performance on each single skin tone of vv100 and vvAll with six unsupervised methods. Colors of lines get darker along with the variation of the skin tone.
-![The overview of the results](./figures/unsupervised.png)
+![The overview of the results](./figures/Unsupervised.png)
 
 ## Training on vv100 and test on PURE, UBFC-rPPG, MMPD
 
