@@ -1,3 +1,13 @@
+<p align="center">
+:heart: Please remember to :star: this repo if you find it useful and cite our work if you end up using it in your work! :heart:
+</p>
+<p align="center">
+:heart: If you have any questions or concerns, please create an <a href="https://github.com/ubicomplab/rPPG-Toolbox/issues">issue</a> :memo:! :heart:
+</p>
+
+
+
+
 # :wrench: Setup
 
 Create a conda environment with the configuration file:
