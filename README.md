@@ -61,7 +61,7 @@ in: Proc. 23st IEEE Int. Symposium on Robot and Human Interactive Communication 
          |      |-- ii-jj.json
     -----------------
 
-* [VitalVideo]
+* VitalVideo
     * Toye P J. Vital Videos: A dataset of videos with PPG and blood pressure ground truths[J]. arXiv preprint arXiv:2306.11891, 2023.
     -----------------
          data/VitalVideo/
