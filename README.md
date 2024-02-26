@@ -29,6 +29,4 @@ For example, if you want to run The model trained on VitalVideo and tested on PU
 
 STEP 1: Modify `./configs/vv100_test_configs/vv100_PURE_TSCAN_BASIC.yaml`
 
-Run `python main.py --config_file ./configs/vv100_test_configs/vv100_PURE_TSCAN_BASIC.yaml`
-
-
+STEP 2: Run `python main.py --config_file ./configs/vv100_test_configs/vv100_PURE_TSCAN_BASIC.yaml`
