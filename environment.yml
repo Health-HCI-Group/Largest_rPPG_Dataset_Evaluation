@@ -178,4 +178,4 @@ dependencies:
       - webencodings==0.5.1
       - xyzservices==2023.10.1
       - zipp==3.17.0
-prefix: /home/user/miniconda3/envs/lxy1
+prefix: /home/user/miniconda3/envs/toolbox
