@@ -167,17 +167,17 @@ class vv100Loader(BaseLoader):
 
     @staticmethod
     def read_wave(dir, filename):
-        with h5py.File(os.path.join(dir,"COMPRESS_ts_bvps.h5"), 'r') as hf:
+        with h5py.File(os.path.join(dir,"vv100_ts_bvps.h5"), 'r') as hf:
             dataset_name = filename
             array = hf[dataset_name][:]
             return array[0], array[1]
 
-    @staticmethod
-    def read_ts(dir, filename):
-        with h5py.File(os.path.join(dir,"COMPRESS_ts_frames.h5"), 'r') as hf:
-            dataset_name = filename
-            array = hf[dataset_name][:]
-            return array[0], array[1]
+    # @staticmethod
+    # def read_ts(dir, filename):
+    #     with h5py.File(os.path.join(dir,"COMPRESS_ts_frames.h5"), 'r') as hf:
+    #         dataset_name = filename
+    #         array = hf[dataset_name][:]
+    #         return array[0], array[1]
 
     @staticmethod
     def read_information(dir, filename, j):
