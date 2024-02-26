@@ -12,9 +12,9 @@ Training on VitalVideo and Testing on MMPD With TSCAN.
 
 STEP 1: Download the VitalVideo and MMPD raw data.
 
-STEP 2: Modify `./configs/vv100_train_configs/vv100_vv100_MMPD_TSCAN_BASIC.yaml'
+STEP 2: Modify './configs/vv100_train_configs/vv100_vv100_MMPD_TSCAN_BASIC.yaml'
 
-STEP 3: Run `python main.py --config_file ./configs/vv100_vv100_MMPD_TSCAN_BASIC.yaml'
+STEP 3: Run 'python main.py --config_file ./configs/vv100_vv100_MMPD_TSCAN_BASIC.yaml'
 
 Note 1: Set *DO PREPROCESS* to *True* on the yaml file if it is the first time. And turn it off when you train the network after the first time.
 
@@ -27,7 +27,7 @@ Please use config which has *only_test* in *TOOLBOX_MODE*.
 
 For example, if you want to run The model trained on VitalVideo and tested on PURE.
 
-STEP 1: Modify `./configs/vv100_test_configs/vv100_PURE_TSCAN_BASIC.yaml'
+STEP 1: Modify './configs/vv100_test_configs/vv100_PURE_TSCAN_BASIC.yaml'
 
 Run `python main.py --config_file ./configs/vv100_test_configs/vv100_PURE_TSCAN_BASIC.yaml`
 
