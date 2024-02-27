@@ -5,9 +5,12 @@
 :heart: If you have any questions or concerns, please create an <a href="https://github.com/ubicomplab/rPPG-Toolbox/issues">issue</a> :memo:! :heart:
 </p>
 
+# Camera-based Remote Physiology Sensing for Hundreds of Subjects across Skin Tones
+Remote photoplethysmography (rPPG) emerges as a promising method for non-invasive, convenient measurement of vital signs, utilizing the widespread presence of cameras. Despite significant advancements, existing datasets fall short in terms of size and diversity, limiting comprehensive evaluation under diverse conditions. This paper presents an in-depth analysis across four datasets with 1000 subjects, mainly focused on VitalVideo dataset, the largest real-world rPPG dataset to date, encompassing 900 subjects and 6 skin tones. Through rigorous experimentation with six unsupervised methods and three advanced supervised models(TSCAN, Physnet, Physformer), we demonstrate that just a few hundred subjects are adequate for effective rPPG training, thus attesting to the dataset's utility. Our findings highlight the importance of diversity and consistency in skin tones for precise performance evaluation across different datasets.
 
 # :file_folder: Datasets
-The toolbox supports six datasets, namely SCAMPS, UBFC-rPPG, PURE, BP4D+, UBFC-Phys, and MMPD. Please cite the corresponding papers when using these datasets. For now, we recommend training with UBFC-rPPG, PURE, or SCAMPS due to the level of synchronization and volume of the datasets. **To use these datasets in a deep learning model, you should organize the files as follows.**
+The code supports four datasets, namely VitalVideo, UBFC-rPPG, PURE, and MMPD. Please cite the corresponding papers when using these datasets.  **To use these datasets in a deep learning model, you should organize the files as follows.**
+
 * [MMPD](https://github.com/McJackTang/MMPD_rPPG_dataset)
     * Jiankai Tang, Kequan Chen, Yuntao Wang, Yuanchun Shi, Shwetak Patel, Daniel McDuff, Xin Liu, "MMPD: Multi-Domain Mobile Video Physiology Dataset", IEEE EMBC, 2023
     -----------------
@@ -139,3 +142,9 @@ For example, if you want to run The model trained on VitalVideo and tested on PU
 STEP 1: Modify `./configs/vv100_test_configs/vv100_PURE_TSCAN_BASIC.yaml`
 
 STEP 2: Run `python main.py --config_file ./configs/vv100_test_configs/vv100_PURE_TSCAN_BASIC.yaml`
+
+# Acknowledgment
+This repo is based on [rPPG-Toolbox](https://github.com/ubicomplab/rPPG-Toolbox) : https://github.com/ubicomplab/rPPG-Toolbox.
+
+# Citation
+To be updated soon.
