@@ -269,49 +269,9 @@ class PhysFormer_small_Trainer(BaseTrainer):
                     labels[subj_index][sort_index] = label[idx]
 
         print('')
-        MAE, RMSE, MAPE, Pearson, SNR = calculate_metrics(predictions, labels, self.config)
+        calculate_metrics(predictions, labels, self.config)
         if self.config.TEST.OUTPUT_SAVE_DIR: # saving test outputs
             self.save_test_outputs(predictions, labels, self.config)
-        with open('/data1/lxy/rPPG-Toolbox-main/result_paper.csv', 'a', newline='') as csvfile:
-            
-            csv_writer = csv.writer(csvfile)
-            # GENDER = ' '.join(map(str, self.config.TRAIN.DATA.INFO.GENDER))
-            # LOCATION = ' '.join(map(str, self.config.TRAIN.DATA.INFO.LOCATION))
-            # FACIAL_MOVEMENT = ' '.join(map(str, self.config.TRAIN.DATA.INFO.FACIAL_MOVEMENT))
-            # TALKING = ' '.join(map(str, self.config.TRAIN.DATA.INFO.TALKING))
-            if(self.config.TRAIN.DATA.DATASET=="vv100" or self.config.TRAIN.DATA.DATASET=="vvAll"):
-                TRAIN_FITZPATRICK = ' '.join(map(str, self.config.TRAIN.DATA.INFO.FITZPATRICK))
-            elif(self.config.TRAIN.DATA.DATASET=="MMPD"):
-                TRAIN_FITZPATRICK = ' '.join(map(str, self.config.TRAIN.DATA.INFO.SKIN_COLOR))
-            else:
-                TRAIN_FITZPATRICK = ' '
-            if(self.config.TEST.DATA.DATASET=="vv100" or self.config.TEST.DATA.DATASET=="vvAll"):
-                TEST_FITZPATRICK = ' '.join(map(str, self.config.TEST.DATA.INFO.FITZPATRICK))
-            elif(self.config.TEST.DATA.DATASET=="MMPD"):
-                TEST_FITZPATRICK = ' '.join(map(str, self.config.TEST.DATA.INFO.SKIN_COLOR))
-            else:
-                TEST_FITZPATRICK = ' '
-            if(self.config.TOOLBOX_MODE == "train_and_test"):
-                data_to_add = [self.config.TRAIN.DATA.DATASET, self.config.TEST.DATA.DATASET,self.config.TRAIN.EPOCHS,
-                                self.config.TRAIN.DATA.PREPROCESS.CHUNK_LENGTH, MAE,RMSE, MAPE, Pearson, SNR,
-                                TRAIN_FITZPATRICK, TEST_FITZPATRICK, self.config.MODEL.NAME]
-            elif(self.config.TOOLBOX_MODE == "only_test"):
-                # GENDER = ' '.join(map(str, self.config.TEST.DATA.INFO.GENDER))
-                # LOCATION = ' '.join(map(str, self.config.TEST.DATA.INFO.LOCATION))
-                # FACIAL_MOVEMENT = ' '.join(map(str, self.config.TEST.DATA.INFO.FACIAL_MOVEMENT))
-                # TALKING = ' '.join(map(str, self.config.TEST.DATA.INFO.TALKING))
-                model_save_name = self.config.INFERENCE.MODEL_PATH.split('/')[-1].split('.')[0].split('_')[0]
-                if(model_save_name=="vv100" or model_save_name=="vvAll"):
-                    TRAIN_FITZPATRICK = self.config.INFERENCE.MODEL_PATH.split('/')[-1].split('.')[0].split('_')[-2][2:]
-                    TRAIN_FITZPATRICK = ' '.join(map(str,TRAIN_FITZPATRICK))
-                elif(model_save_name=="MMPD"):
-                    TRAIN_FITZPATRICK = self.config.INFERENCE.MODEL_PATH.split('/')[-1].split('.')[0].split('_')[-2][1:]
-                    TRAIN_FITZPATRICK = ' '.join(map(str,TRAIN_FITZPATRICK))
-                epoch_num = int(self.config.INFERENCE.MODEL_PATH.split('/')[-1].split('.')[0].split('_')[-1][5:])
-                data_to_add = [model_save_name, self.config.TEST.DATA.DATASET, str(epoch_num + 1),
-                                self.config.TEST.DATA.PREPROCESS.CHUNK_LENGTH, MAE,RMSE, MAPE, Pearson, SNR,
-                                TRAIN_FITZPATRICK, TEST_FITZPATRICK, self.config.MODEL.NAME]
-            csv_writer.writerow(data_to_add)
 
     def save_model(self, index):
         if not os.path.exists(self.model_dir):
