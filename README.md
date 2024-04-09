@@ -147,4 +147,13 @@ STEP 2: Run `python main.py --config_file ./configs/vv100_test_configs/vv100_PUR
 This repo is based on [rPPG-Toolbox](https://github.com/ubicomplab/rPPG-Toolbox) : https://github.com/ubicomplab/rPPG-Toolbox.
 
 # Citation
-To be updated soon.
+```
+@misc{tang2024camerabased,
+      title={Camera-Based Remote Physiology Sensing for Hundreds of Subjects Across Skin Tones}, 
+      author={Jiankai Tang and Xinyi Li and Jiacheng Liu and Xiyuxing Zhang and Zeyu Wang and Yuntao Wang},
+      year={2024},
+      eprint={2404.05003},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
