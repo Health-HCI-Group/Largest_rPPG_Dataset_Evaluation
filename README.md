@@ -148,12 +148,10 @@ This repo is based on [rPPG-Toolbox](https://github.com/ubicomplab/rPPG-Toolbox)
 
 # Citation
 ```
-@misc{tang2024camerabased,
-      title={Camera-Based Remote Physiology Sensing for Hundreds of Subjects Across Skin Tones}, 
-      author={Jiankai Tang and Xinyi Li and Jiacheng Liu and Xiyuxing Zhang and Zeyu Wang and Yuntao Wang},
-      year={2024},
-      eprint={2404.05003},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{tang2024camera,
+  title={Camera-Based Remote Physiology Sensing for Hundreds of Subjects Across Skin Tones},
+  author={Tang, Jiankai and Li, Xinyi and Liu, Jiacheng and Zhang, Xiyuxing and Wang, Zeyu and Wang, Yuntao},
+  booktitle={CHI'24 Workshop PhysioCHI'24},
+  year={2024}
 }
 ```
